@@ -1,28 +1,39 @@
+<script>
+	import CardList from '../list/cards.svelte';
+	import Card from '$lib/components/card.svelte';
+    
+    	const getCards = async () => {
+        
+
+		let cardFetch = await fetch('/koen.json');
+		let cards = await cardFetch.json();
+		//window.cards = cards;
+		return cards;
+	};
+
+</script>
+
 
 <main>
 	<header>
-		<h1>Pokemon Cards <sup>V2</sup></h1>
-		<section class="intro">
+		<h1>Pokemon Cards Koen<sup>V2</sup></h1>
+    </header>
 
-			<h1>Entrenador Iván</h1>
-			<p>
-				<a href="/ivan">
-					<img class="album_card" src="/ivan_trainer_card.png" alt="" />				
-				</a>
-			</p>
-			<br />
-			<h1>Entrenador Koen</h1>
-			<p>
-				<a href="/koen">
-					<img class="album_card" src="/koen_trainer_card.png" alt="" width="300" />
-				</a>
-			</p>
-			<br />
-			<p>
-				<a href="/original">Pokemon Cards Original</a>
-			</p>
-
-		</section>
+	<CardList>
+		{#await getCards()}
+			loading...
+		{:then cards}
+			{#each cards as card, id}
+				<Card
+					img={card.images.large}
+					number={card.number}
+					supertype={card.supertype}
+					subtypes={card.subtypes}
+					rarity={card.rarity}
+				/>
+			{/each}
+		{/await}
+	</CardList>
 
 </main>
 

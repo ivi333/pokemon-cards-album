@@ -10,7 +10,10 @@ const config = {
           usePolling: true,
         }
       }
-    })
+    }),
+    prerender: {
+      default: true
+    },
 	}
 };
 

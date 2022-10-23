@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Mew VMAX",
+    "supertype": "Pokémon",
+    "subtypes": ["VMAX"],
+    "number": "193",
+    "rarity": "Rare Rainbow",
+    "images": {
+      "small": "https://images.pokemontcg.io/sm35/1.png",
+      "large": "https://assets.pokemon.com/assets/cms2-es-es/img/cards/web/SWSH8/SWSH8_ES_268.png"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Mew V",
+    "supertype": "Pokémon",
+    "subtypes": ["Basic", "V"],
+    "number": "193",
+    "rarity": "Rare Ultra",
+    "images": {
+      "small": "https://images.pokemontcg.io/sm35/1.png",
+      "large": "https://assets.pokemon.com/assets/cms2-es-es/img/cards/web/SWSH8/SWSH8_ES_250.png"
+    }
+  }  
+]
