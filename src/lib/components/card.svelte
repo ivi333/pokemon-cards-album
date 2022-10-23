@@ -384,7 +384,7 @@
 		--glow: #69d1e9;
 		transform: rotateY(var(--rx)) rotateX(var(--ry));
 		transform-style: preserve-3d;
-		box-shadow: 0px 10px 20px -5px black;
+		box-shadow: 10px 10px 20px -5px orange;
 		border-radius: var(--radius);
 		outline: none;
 		transition: box-shadow 0.4s ease, outline 0.2s ease;
